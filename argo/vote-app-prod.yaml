@@ -5,12 +5,12 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: vote-app-prod
+    namespace: ecl-demo
     server: https://kubernetes.default.svc 
   project: default 
   source: 
     path: environments/prod
-    repoURL: https://github.com/blues-man/vote-app-gitops
+    repoURL: https://github.com/devopslab-ecl/vote-app-gitops
     targetRevision: main
   syncPolicy: 
     automated:
