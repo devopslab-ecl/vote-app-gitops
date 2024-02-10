@@ -38,7 +38,7 @@ jobs:
 
     # Update both values files (production and non-production resources)
     - name: Update env prod.yaml
-      run: 'yq -i e "images[0].newTag = \"${{github.event.inputs.version}}\"" environments/prod/kustomization.yaml'
+      run: 'yq -i e ".images[0].newTag = \"${{github.event.inputs.version}}\"" environments/prod/kustomization.yaml'
 
     # Create a PR with the new values files. This requires actions to
     # be allowed to open a PR in the repository:
