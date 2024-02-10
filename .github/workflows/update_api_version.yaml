@@ -16,9 +16,6 @@ on:
       version:
         required: true
         description: The version tag that invoked this workflow
-      image:
-        required: true
-        description: The new image, e.g quay.io/evanshortiss/gitops-and-actions:sha-8d4deb9
 
 jobs:
   update-image-tag:
@@ -49,7 +46,7 @@ jobs:
       with:
         title: ${{github.event.inputs.message}}
         branch: update-image-${{github.event.inputs.version}}
-        commit-message: update backend image tag to ${{github.event.inputs.image}}
+        commit-message: update backend image tag to ${{github.event.inputs.version}}
 
     - name: Check outputs
       if: ${{ steps.cpr.outputs.pull-request-number }}
