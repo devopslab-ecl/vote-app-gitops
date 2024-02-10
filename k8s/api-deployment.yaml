@@ -22,7 +22,7 @@ spec:
         app: vote-api
     spec:
       containers:
-        - image: ecldemoreg.azurecr.io/vote-app/vote-api:v0.0.2
+        - image: ecldemoreg.azurecr.io/vote-app/vote-api:v0.0.5
           imagePullPolicy: Always
           name: vote-api
           ports:
