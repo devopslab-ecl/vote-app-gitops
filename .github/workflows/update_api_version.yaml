@@ -38,7 +38,7 @@ jobs:
 
     # Update both values files (production and non-production resources)
     - name: Update values.yaml
-      run: 'yq -i e ".spec.template.spec.containers.[0].image = \"${{ github.event.inputs.image }}\"" k8s/api-deployment.yaml.yaml'
+      run: 'yq -i e ".spec.template.spec.containers.[0].image = \"${{ github.event.inputs.image }}\"" k8s/api-deployment.yaml'
 
     # Create a PR with the new values files. This requires actions to
     # be allowed to open a PR in the repository:
