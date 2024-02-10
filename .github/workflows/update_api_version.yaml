@@ -1,4 +1,4 @@
-name: Update Container Image
+name: Update API version
 
 # This workflow is triggered by the backend build in the redhat-developer-demos/rps-game-manifests repo.
 # To manually trigger the action, you can use curl with a PAT:
