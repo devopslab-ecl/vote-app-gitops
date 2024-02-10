@@ -5,6 +5,9 @@ bases:
 replicas:
 - name: vote-ui
   count: 1
+images:
+- name: ecldemoreg.azurecr.io/vote-app/vote-api
+  newTag: v0.0.4
 patches:
 - patch: |-
     - op: add
